@@ -1,0 +1,88 @@
+/*
+    coded by 'k4rnel'
+*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+printf("-SAYI TAHMIN OYUNU-");
+srand(time(NULL));
+int menu;
+printf("\nZorluk secin\n1-)KOLAY[10 HAK][MAX 100]");
+printf("\n2-)ORTA[8 HAK][MAX 200]");
+printf("\n3-)ZOR[6 HAK][MAX 400]");
+printf("\n>");
+scanf("%d",&menu);
+int say,i4=0;
+if(menu==1){
+    int rdsay = rand()%100;
+    system("cls");
+    printf("SEVIYE:KOLAY\nTOPLAM HAKKIN:10\n");
+    while(i4<10){
+    printf("\nSayi girin >");
+    scanf("%d",&say);
+    if(say == rdsay){
+        printf("DOGRU TAHMIN TEBRIKLER !\nSENIN TAHMININ %d = PROGRAMIN TUTTUGU %d",say,rdsay);
+        break;
+    }
+    else if(say < rdsay){
+        printf("\nIPUCU:Daha buyuk bir sayi tahmin et\n");
+    }
+    else{
+        printf("\nIPUCU:Daha kucuk bir sayi tahmin et\n");
+    }
+    i4++;
+}//while kolay
+if(i4 == 10){
+    printf("\nHAKKIN BİTTİ\n");
+    printf("BILGISAYARIN TUTTUGU %d",rdsay);
+}//if kolaya menu
+}
+else if(menu==2){
+    int rdsay = rand()%200;
+    system("cls");
+    printf("SEVIYE:ORTA\nTOPLAM HAKKIN:8\n");
+    while(i4<8){
+    printf("\nSayi girin >");
+    scanf("%d",&say);
+    if(say == rdsay){
+        printf("DOGRU TAHMIN TEBRIKLER !\nSENIN TAHMININ %d = PROGRAMIN TUTTUGU %d",say,rdsay);
+        break;
+    }
+    else if(say < rdsay){
+        printf("\nIPUCU:Daha buyuk bir sayi tahmin et\n");
+    }
+    else{
+        printf("\nIPUCU:Daha kucuk bir sayi tahmin et\n");
+    }
+    i4++;
+}//while orta
+if(i4 == 8){
+    printf("\nHAKKIN BİTTİ\nBILGISAYARIN TUTTUGU %d",rdsay);
+}
+}//if orta menu son
+else if(menu==3){
+    int rdsay = rand()%400;
+    system("cls");
+    printf("SEVIYE:ZOR\nTOPLAM HAKKIN:6\n");
+    while(i4<6){
+    printf("\nSayi girin >");
+    scanf("%d",&say);
+    if(say == rdsay){
+        printf("DOGRU TAHMIN TEBRIKLER !\nSENIN TAHMININ %d = PROGRAMIN TUTTUGU %d",say,rdsay);
+        break;
+    }
+    else if(say < rdsay){
+        printf("\nIPUCU:Daha buyuk bir sayi tahmin et\n");
+    }
+    else{
+        printf("\nIPUCU:Daha kucuk bir sayi tahmin et\n");
+    }
+    i4++;
+}//while zor
+if(i4 == 6){
+    printf("\nHAKKIN BİTTİ\nBILGISAYARIN TUTTUGU %d",rdsay);
+}//if zor menu
+}
+}
